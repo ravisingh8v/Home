@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-Time Picker</title>
+    <!-- Font style link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom Style  -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+
+<body onload="onload()">
+    <!-- main wrapper -->
+    <div class="wrapper d-flex justify-center align-center">
+        <!-- Picker Container Wrapper  -->
+        <div class="picker-wrapper justify-around d-flex direction-column align-center justify-center w-auto">
+            <!-- Input And head Wrapper -->
+            <div class="input-wrapper text-center ">
+                <h1>TIME PICKER</h1>
+                <select name="Time" id="country" onchange="change()">
+                    <option value="" selected disabled>Select Time Zone</option>
+                    <option value="ind">India Standard Time</option>
+                    <option value="usa">America Time Zone</option>
+                    <option value="aus">Australia Time Zone</option>
+                </select>
+            </div>
+            <!-- INput And head Wrapper Close  -->
+
+            <!-- output content wrapper  -->
+            <div class="output-wrapper">
+                <h2 id="output"></h2>
+                <!-- <h2 id="output2"></h2> -->
+            </div>
+            <!-- output content wrapper end  -->
+        </div>
+
+    </div>
+    <script src="Assets/JS/script.js"></script>
+</body>
+
+</html>

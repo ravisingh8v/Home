@@ -1,0 +1,77 @@
+/* universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Helper CLasses  */
+
+.d-flex {
+    display: flex;
+}
+.direction-column{
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.h-auto {
+    height: auto;
+}
+.unset{
+    all: unset;
+}
+
+/* Main CSS Start  */
+
+.wrapper {
+    background-color: rgb(192, 192, 192);
+    height: 100vh;
+    width: 100vw;
+}
+.picker-wrapper {
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+.input-wrapper{
+    top: 30px;
+    
+}
+h1 {
+    font-weight: bold;
+}

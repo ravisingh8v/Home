@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Imported Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- custom CSS  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav id="navbar" class="bg-primary w-100">
+        <h1 class="">Dictionary</h1>
+    </nav>
+
+    <!-- main section start  -->
+    <main id="main" class="main-wrapper d-flex justify-center direction-column">
+        <!-- input wrapper  -->
+        <div class="input-wrap text-center">
+            <h2>Search any word exist in the world :]</h2>
+            <!-- form wrap  -->
+            <div class="form-wrap d-flex justify-center">
+                <form action="">
+                <!-- search box input and btn wrap  -->
+                <div class="search-box d-flex justify-between">
+                    
+                    <input class="unset" type="text" id="input" placeholder="Type a word">
+                    <button class="unset btn" id="search" type="submit">Search</button>
+                </div>
+            </form>
+                <!-- end -->
+            </div>
+            <!-- end form wrap  -->
+        </div>
+        <!-- input wrapper end -->
+
+        <!-- output section start  -->
+        <div class="output-wrapper d-flex  align-center direction-column">
+            <span class="loading text-center">Loading....</span>
+            <p class="def text-center"><!--Here we print defination of word.--></p>
+            <div class="audio text-center"></div>
+            <div class="not-found text-center"></div>
+        </div>
+    </main>
+
+
+    <!-- js link here  -->
+    <script defer src="app.js"></script>
+</body>
+
+</html>

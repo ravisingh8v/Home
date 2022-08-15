@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Helper CLasses  */
+
+.d-flex {
+    display: flex;
+}
+.direction-column{
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.w-auto {
+    width: auto;
+}
+.w-100{
+    width: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+.unset{
+    all: unset;
+}
+
+/* Main CSS Start  */
+
+#mainWrapper {
+    background-color: rgb(37, 37, 37);
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+h1{
+text-transform: uppercase ;
+}
+.all-content-wrapper{
+    padding: 50px;
+    height: 400px;
+    background-color: rgb(83, 104, 104);
+    box-shadow: 0px 0px 10px 2px white;
+}
+</style>
+<body>
+    <!-- main wrapper  -->
+<main id="mainWrapper" class="d-flex justify-center align-center">
+<div class="all-content-wrapper d-flex align-center direction-column">
+<div class="input-wrapper d-flex direction-column align-center">
+    <h1>Search Employee Data</h1>
+    <form action="">
+    <input type="text" placeholder="search">
+    <button id="btn-primary" type="submit">Search</button>
+</form>
+</div>
+<div class="table-wrapper">
+<table class="w-100">
+    <thead id="thead" class="d-flex justify-between">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Designation</th>
+    <th>Email</th>
+</tr>
+    </thead>
+</table>
+
+</div>
+
+
+
+</div>
+
+
+</main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

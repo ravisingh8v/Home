@@ -1,0 +1,153 @@
+ /* universal */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* Global CSS */
+ body {
+     color: white;
+     background-color: rgb(255, 255, 255);
+     font-family: 'Poppins', sans-serif;
+ }
+
+ /* Helper CLasses  */
+
+ .d-flex {
+     display: flex;
+ }
+
+ .direction-column {
+     flex-direction: column;
+ }
+
+ .align-center {
+     align-items: center;
+ }
+
+ .justify-center {
+     justify-content: center;
+ }
+
+ .justify-between {
+     justify-content: space-between;
+ }
+
+ .justify-around {
+     justify-content: space-around;
+ }
+
+ .text-center {
+     text-align: center;
+ }
+
+ .p-relative {
+     position: relative;
+ }
+
+ .p-absolute {
+     position: absolute;
+ }
+
+ .w-auto {
+     width: auto;
+ }
+
+ .w-100 {
+     width: 100%;
+ }
+
+ .h-auto {
+     height: auto;
+ }
+
+ .unset {
+     all: unset;
+ }
+ .d-none{
+    display: none;
+ }
+
+ /* Main CSS Start  */
+
+h1{
+    padding: 10px;
+    background-color: skyblue; width: 100%;
+    margin-bottom: 20px;
+}
+.input-wrapper input{
+    outline:none;
+    border-color: skyblue;
+}
+button{
+    background-color: skyblue;
+    color: white;
+    border-color: skyblue;
+}
+
+.input-wrapper input,button{
+    margin-top: 10px;
+padding: 10px;
+}
+
+.table-wrapper{
+    padding: 10px;
+    width: 100%;
+}
+
+ table {
+    width: 100%;
+     /* border: 2px solid black; */
+     margin-top: 20px;
+     /* border-spacing: 20px 15px; */
+     border-collapse: collapse;
+
+ }
+
+ table tr:nth-child(odd) {
+     background-color: #D6EEEE;
+ }
+ table tr:nth-child(even) {
+     background-color: skyblue;
+ }
+
+ th,
+ td {
+     border: 1px solid black;
+     text-align: center;
+     padding: 10px;
+ }
+
+ th {color: white;
+     background-color: skyblue;
+ }
+
+ td {
+     color: black;
+ }
+
+
+ .pop-up{
+    text-align: center;
+    background-color: rgb(184, 229, 247);
+    width: 80%;
+    z-index: 10000;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 500px 300px grey;
+    
+ }
+ .pop-up input{margin: 10px;
+    padding: 5px;
+ }
+ .pop-up-btns{
+    margin-top: 20px;
+ }
+ .pop-up-btns button{
+    margin: 10px;
+ }
+

@@ -1,124 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
 </head>
 <style>
-    /* universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* Global CSS */
-body {
-    font-family: 'Poppins', sans-serif;
-}
 
-/* Helper CLasses  */
-
-.d-flex {
-    display: flex;
-}
-.direction-column{
-    flex-direction: column;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-.justify-around{
-    justify-content: space-around;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.p-relative {
-    position: relative;
-}
-
-.p-absolute {
-    position: absolute;
-}
-
-.w-auto {
-    width: auto;
-}
-.w-100{
-    width: 100%;
-}
-
-.h-auto {
-    height: auto;
-}
-.unset{
-    all: unset;
-}
-
-/* Main CSS Start  */
-
-#mainWrapper {
-    background-color: rgb(37, 37, 37);
-    height: 100vh;
-    width: 100vw;
-    color: white;
-}
-h1{
-text-transform: uppercase ;
-}
-.all-content-wrapper{
-    padding: 50px;
-    height: 400px;
-    background-color: rgb(83, 104, 104);
-    box-shadow: 0px 0px 10px 2px white;
-}
 </style>
+
 <body>
+    <nav class="text-center">
+        <h1>Search Users Data</h1>
+    </nav>
     <!-- main wrapper  -->
-<main id="mainWrapper" class="d-flex justify-center align-center">
-<div class="all-content-wrapper d-flex align-center direction-column">
-<div class="input-wrapper d-flex direction-column align-center">
-    <h1>Search Employee Data</h1>
-    <form action="">
-    <input type="text" placeholder="search">
-    <button id="btn-primary" type="submit">Search</button>
-</form>
-</div>
-<div class="table-wrapper">
-<table class="w-100">
-    <thead id="thead" class="d-flex justify-between">
-<tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Designation</th>
-    <th>Email</th>
-</tr>
-    </thead>
-</table>
+    <main id="mainWrapper" class="d-flex justify-center align-center direction-column">
 
-</div>
+        <div class="input-wrapper d-flex direction-column align-center">
 
+            <form action="">
+                <input type="text" placeholder="Search" id="input" >
+                <button id="btn-primary" type="button" onclick="onKey()">Search</button>
+            </form>
+        </div>
+        <section class="table-wrapper">
+            <!-- table start from here  -->
+            <table id="myTable" class="w-100">
+                <!-- thead  -->
+                <thead id="thead" class="">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Designation</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <!-- head end  -->
 
+                <!-- tbody -->
+                <tbody id="tbody">
 
-</div>
+                </tbody>
+                <!-- body end  -->
+            </table>
+            <!-- table end  -->
+            <div class="btn-wrapper">
+                <button class="btn" onclick="myfuntion()">Add Users</button>
+                <div id="pop-up" class="pop-up d-none p-absolute">
+                    <form action="">
+                        <!-- <label for="Id">Id</label> -->
+                        <input type="text" name="" id="Id" placeholder="ID">
+                        <!-- <label for="Name">Name</label> -->
+                        <input type="text" name="" id="Name" placeholder="Name">
+                        <!-- <label for="Surname">Surname</label> -->
+                        <input type="text" name="" id="Surname" placeholder=" urname">
+                        <!-- <label for="Designation">Designation</label> -->
+                        <input type="text" name="" id="Designation" placeholder="Designation">
+                        <!-- <label for="Email">Email</label> -->
+                        <input type="text" name="" id="Email" placeholder="xyz@gmail.com">
+                        
+                    </form>
+                    <div class="btn-wrapper pop-up-btns">
+                    <button id="btn-primary" type="submit">Add Uers</button>
+                    <button id="btn-primary" type="submit" onclick="myfuntion()">Cancel</button>
+                </div>
 
+                </div>
+                <button id="btn-primary" type="filter">Filter</button>
+            </div>
+        </section>
 
-</main>
-    
+    </main>
+
     <script src="script.js"></script>
+    <script>
+        function onKey() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("input");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+        </script>
 </body>
+
 </html>
